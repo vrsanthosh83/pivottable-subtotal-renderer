@@ -19,35 +19,25 @@
 
         <!-- for examples only! script to show code to user -->
         <script type="text/javascript" src="js/show_code.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="./subtotal_examples.css">
     </head>
     <body>
     <script type="text/javascript">
-    // This example loads the "Canadian Parliament 2012" dataset
-    // and adds derived attributes: "Age Bin" and "Gender Imbalance".
+    // This example demonstrates disabling of row / column subtotal display 
 
-    $(function(){
+    $(function() {
         var dataClass = $.pivotUtilities.SubtotalPivotData;
-        var derivers = $.pivotUtilities.derivers;
         var renderer = $.pivotUtilities.subtotal_renderers["Table With Subtotal"];
 
         $.getJSON("data/mps.json", function(mps) {
             $("#output").pivot(mps, {
                 dataClass: dataClass,
                 rows: ["Gender", "Province"],
-                cols: ["Party", "Age Bin", "Age"],
+                cols: ["Party", "Age"],
                 renderer: renderer,
-                derivedAttributes: {
-                   "Age Bin": derivers.bin("Age", 10),
-                   "Gender Imbalance": function(mp) {
-                       return mp["Gender"] == "Male" ? 1 : -1;
-                   }
-               },
-               rendererOptions: {
-                   collapseRowsAt: 0,
-                   collapseColsAt: 1
-               }
+                rendererOptions: {
+                    // rowSubtotalDisplay: "Disable",
+                    colSubtotalDisplay: "Disable"
+                }
             });
         });
     });

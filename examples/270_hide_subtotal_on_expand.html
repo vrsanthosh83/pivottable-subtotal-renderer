@@ -22,8 +22,7 @@
     </head>
     <body>
     <script type="text/javascript">
-    // This example loads the "Canadian Parliament 2012" dataset
-    // and adds derived attributes: "Age Bin" and "Gender Imbalance".
+    // This example demonstrates hiding subtotals on expand
 
     $(function() {
         var dataClass = $.pivotUtilities.SubtotalPivotData;
@@ -37,7 +36,7 @@
                 renderers: renderers,
                 rendererName: "Table With Subtotal",
                 rendererOptions: {
-                    rowSubtotalDisplay: "Hide On Expand",
+                    // rowSubtotalDisplay: "Hide On Expand",
                     colSubtotalDisplay: "Hide On Expand"
                 }
             });
