@@ -37,7 +37,7 @@ If you are loading the scripts directly (as in the [examples](http://nagarajanch
 3. load the Subtotal.js files:
   1. `subtotal.min.js`
 
-Here is the source code of an [exmaple](https://github.com/nagarajanchinnasamy/pivottable-subtotal-renderer/blob/master/examples/subtotal_pivot.html/) 
+Here is the source code of an [exmaple](https://github.com/nagarajanchinnasamy/pivottable-subtotal-renderer/blob/master/examples/105_default.html/) 
 
 ## How do I use the code?
 
